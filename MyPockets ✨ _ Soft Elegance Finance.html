@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)file:///C:/Melani/keymey.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MyPockets ✨ | Soft Elegance Finance</title>
+    
+    <!-- Fonts: Plus Jakarta Sans for a premium, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./MyPockets ✨ _ Soft Elegance Finance_files/css2" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="./MyPockets ✨ _ Soft Elegance Finance_files/saved_resource"></script>
+    
+    <!-- Phosphor Icons (Using Duotone for a softer, elegant look) -->
+    <script src="./MyPockets ✨ _ Soft Elegance Finance_files/web"></script><link rel="stylesheet" type="text/css" href="./MyPockets ✨ _ Soft Elegance Finance_files/style.css"><link rel="stylesheet" type="text/css" href="./MyPockets ✨ _ Soft Elegance Finance_files/style(1).css"><link rel="stylesheet" type="text/css" href="./MyPockets ✨ _ Soft Elegance Finance_files/style(2).css"><link rel="stylesheet" type="text/css" href="./MyPockets ✨ _ Soft Elegance Finance_files/style(3).css"><link rel="stylesheet" type="text/css" href="./MyPockets ✨ _ Soft Elegance Finance_files/style(4).css"><link rel="stylesheet" type="text/css" href="./MyPockets ✨ _ Soft Elegance Finance_files/style(5).css">
+
+    <!-- Chart.js -->
+    <script src="./MyPockets ✨ _ Soft Elegance Finance_files/chart.js.download"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: 'var(--brand)',
+                        brandLight: 'var(--brand-light)',
+                        bgBase: 'var(--bg-base)',
+                        bgCard: 'var(--bg-card)',
+                        textMain: 'var(--text-main)',
+                        textMuted: 'var(--text-muted)',
+                        income: 'var(--color-income)',
+                        expense: 'var(--color-expense)',
+                        borderColor: 'var(--border-color)',
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0, 0, 0, 0.05)',
+                        'soft-hover': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+                        'brand-glow': '0 10px 30px -10px var(--brand)',
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)'
+                    },
+                    borderRadius: {
+                        '3xl': '1.5rem',
+                        '4xl': '2rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            /* Default: Rose Elegance (Soft, premium girly but universal) */
+            --bg-base: #FCF9F9; /* Warm soft white */
+            --bg-card: #FFFFFF;
+            --text-main: #2D2A2B;
+            --text-muted: #8E8A8C;
+            --brand: #FF8BA7; /* Soft blush rose */
+            --brand-light: #FFF0F3;
+            --color-income: #34C759; /* Soft iOS Green */
+            --color-expense: #FF3B30; /* Soft iOS Red */
+            --border-color: #F4EBEB;
+            --gradient-1: #FF8BA7;
+            --gradient-2: #FFC2D1;
+        }
+
+        [data-theme="lavender"] {
+            --bg-base: #F8F6FC;
+            --bg-card: #FFFFFF;
+            --text-main: #2A2830;
+            --text-muted: #8B8894;
+            --brand: #A78BFA; /* Soft Violet */
+            --brand-light: #F3F0FF;
+            --border-color: #EBE8F4;
+            --gradient-1: #A78BFA;
+            --gradient-2: #C4B5FD;
+        }
+
+        [data-theme="sage"] {
+            /* Very universal, earthy minimalist */
+            --bg-base: #F6FBF7;
+            --bg-card: #FFFFFF;
+            --text-main: #28302A;
+            --text-muted: #88948B;
+            --brand: #86A789; /* Sage Green */
+            --brand-light: #F0F6F1;
+            --border-color: #E6EFE8;
+            --gradient-1: #86A789;
+            --gradient-2: #B2C8B5;
+        }
+
+        [data-theme="dark"] {
+            /* Midnight Rose */
+            --bg-base: #121212;
+            --bg-card: #1C1C1E;
+            --text-main: #FDFDFD;
+            --text-muted: #A1A1A6;
+            --brand: #FFB5A7; /* Rose gold on dark */
+            --brand-light: #2A1F21;
+            --border-color: #2C2C2E;
+            --gradient-1: #FFB5A7;
+            --gradient-2: #E5989B;
+            --color-income: #32D74B;
+            --color-expense: #FF453A;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            transition: background-color 0.4s ease, color 0.4s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .bento-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            box-shadow: var(--soft);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .bento-card:hover {
+            box-shadow: var(--soft-hover);
+            transform: translateY(-2px);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        [data-theme="dark"] .glass-panel {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Animations */
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .view-section {
+            display: none;
+            animation: fadeSlideUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        .view-section.active { display: block; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+        /* Modals iOS style */
+        .modal-overlay {
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 9999;
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        
+        .modal-content {
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        @media (min-width: 768px) {
+            .modal-content { transform: translateY(30px) scale(0.95); opacity: 0; }
+            .modal-overlay.active .modal-content { transform: translateY(0) scale(1); opacity: 1; }
+        }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+
+        /* Toast */
+        .toast {
+            transform: translateY(-100%) scale(0.9);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .toast.show {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Sidebar active item */
+        .nav-btn.active {
+            background-color: var(--brand-light);
+            color: var(--brand);
+            position: relative;
+        }
+        .nav-btn.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 20%;
+            height: 60%;
+            width: 4px;
+            background-color: var(--brand);
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-0{bottom:0px}.bottom-6{bottom:1.5rem}.left-0{left:0px}.left-1\/2{left:50%}.right-0{right:0px}.top-0{top:0px}.top-8{top:2rem}.z-10{z-index:10}.z-40{z-index:40}.z-\[10000\]{z-index:10000}.col-span-2{grid-column:span 2 / span 2}.col-span-1{grid-column:span 1 / span 1}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-1{margin-top:0.25rem}.mt-4{margin-top:1rem}.mt-auto{margin-top:auto}.mt-2{margin-top:0.5rem}.mb-5{margin-bottom:1.25rem}.mt-0\.5{margin-top:0.125rem}.mt-6{margin-top:1.5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-screen{height:100vh}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-20{height:5rem}.h-24{height:6rem}.h-32{height:8rem}.h-48{height:12rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-80{height:20rem}.h-full{height:100%}.h-14{height:3.5rem}.h-2{height:0.5rem}.h-3{height:0.75rem}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-12{width:3rem}.w-20{width:5rem}.w-24{width:6rem}.w-32{width:8rem}.w-48{width:12rem}.w-6{width:1.5rem}.w-72{width:18rem}.w-8{width:2rem}.w-\[92\%\]{width:92%}.w-full{width:100%}.w-14{width:3.5rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.max-w-sm{max-width:24rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/3{--tw-translate-y:-33.333333%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-1\/3{--tw-translate-x:33.333333%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-1\/2{--tw-translate-y:50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.appearance-none{-webkit-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.grid-rows-2{grid-template-rows:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-\[var\(--border-color\)\] > :not([hidden]) ~ :not([hidden]){border-color:var(--border-color)}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-\[2rem\]{border-radius:2rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.rounded-t-\[32px\]{border-top-left-radius:32px;border-top-right-radius:32px}.rounded-bl-full{border-bottom-left-radius:9999px}.rounded-tl-full{border-top-left-radius:9999px}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-r{border-right-width:1px}.border-none{border-style:none}.border-\[var\(--border-color\)\]{border-color:var(--border-color)}.border-bgBase{border-color:var(--bg-base)}.border-bgCard{border-color:var(--bg-card)}.border-borderColor{border-color:var(--border-color)}.border-brandLight{border-color:var(--brand-light)}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-white\/20{border-color:rgb(255 255 255 / 0.2)}.bg-\[\#121212\]{--tw-bg-opacity:1;background-color:rgb(18 18 18 / var(--tw-bg-opacity, 1))}.bg-\[\#1A1A1A\]{--tw-bg-opacity:1;background-color:rgb(26 26 26 / var(--tw-bg-opacity, 1))}.bg-\[\#86A789\]{--tw-bg-opacity:1;background-color:rgb(134 167 137 / var(--tw-bg-opacity, 1))}.bg-\[\#A78BFA\]{--tw-bg-opacity:1;background-color:rgb(167 139 250 / var(--tw-bg-opacity, 1))}.bg-\[\#F6FBF7\]{--tw-bg-opacity:1;background-color:rgb(246 251 247 / var(--tw-bg-opacity, 1))}.bg-\[\#F8F6FC\]{--tw-bg-opacity:1;background-color:rgb(248 246 252 / var(--tw-bg-opacity, 1))}.bg-\[\#FCF9F9\]{--tw-bg-opacity:1;background-color:rgb(252 249 249 / var(--tw-bg-opacity, 1))}.bg-\[\#FF8BA7\]{--tw-bg-opacity:1;background-color:rgb(255 139 167 / var(--tw-bg-opacity, 1))}.bg-\[\#FFB5A7\]{--tw-bg-opacity:1;background-color:rgb(255 181 167 / var(--tw-bg-opacity, 1))}.bg-bgBase{background-color:var(--bg-base)}.bg-bgCard{background-color:var(--bg-card)}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-brand{background-color:var(--brand)}.bg-brandLight{background-color:var(--brand-light)}.bg-expense{background-color:var(--color-expense)}.bg-red-50\/50{background-color:rgb(254 242 242 / 0.5)}.bg-textMain{background-color:var(--text-main)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/70{background-color:rgb(255 255 255 / 0.7)}.bg-income{background-color:var(--color-income)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-\[var\(--gradient-1\)\]{--tw-gradient-from:var(--gradient-1) var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 255 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-\[var\(--gradient-2\)\]{--tw-gradient-to:var(--gradient-2) var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}.p-8{padding:2rem}.p-2{padding:0.5rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pb-2{padding-bottom:0.5rem}.pb-28{padding-bottom:7rem}.pl-2{padding-left:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-sans{font-family:"Plus Jakarta Sans", sans-serif}.font-display{font-family:"Plus Jakarta Sans", sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[15px\]{font-size:15px}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[11px\]{font-size:11px}.text-\[13px\]{font-size:13px}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-bgBase{color:var(--bg-base)}.text-brand{color:var(--brand)}.text-expense{color:var(--color-expense)}.text-income{color:var(--color-income)}.text-textMain{color:var(--text-main)}.text-textMuted{color:var(--text-muted)}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-white\/80{color:rgb(255 255 255 / 0.8)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-10{opacity:0.1}.opacity-20{opacity:0.2}.opacity-50{opacity:0.5}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-brand-glow{--tw-shadow:0 10px 30px -10px var(--brand);--tw-shadow-colored:0 10px 30px -10px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-glass{--tw-shadow:0 8px 32px 0 rgba(31, 38, 135, 0.07);--tw-shadow-colored:0 8px 32px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.blur-2xl{--tw-blur:blur(40px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-sm{--tw-drop-shadow:drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-xl{--tw-backdrop-blur:blur(24px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.selection\:bg-brand *::selection{background-color:var(--brand)}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-brand::selection{background-color:var(--brand)}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:border-brand:hover{border-color:var(--brand)}.hover\:border-brandLight:hover{border-color:var(--brand-light)}.hover\:border-textMain:hover{border-color:var(--text-main)}.hover\:bg-brand:hover{background-color:var(--brand)}.hover\:bg-brandLight:hover{background-color:var(--brand-light)}.hover\:bg-red-600:hover{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/30:hover{background-color:rgb(255 255 255 / 0.3)}.hover\:bg-bgBase:hover{background-color:var(--bg-base)}.hover\:bg-textMain:hover{background-color:var(--text-main)}.hover\:bg-opacity-80:hover{--tw-bg-opacity:0.8}.hover\:text-brand:hover{color:var(--brand)}.hover\:text-textMain:hover{color:var(--text-main)}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-bgBase:hover{color:var(--bg-base)}.hover\:text-expense:hover{color:var(--color-expense)}.hover\:opacity-80:hover{opacity:0.8}.hover\:opacity-90:hover{opacity:0.9}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-brand:focus{--tw-ring-color:var(--brand)}.focus\:ring-income:focus{--tw-ring-color:var(--color-income)}.focus\:ring-expense:focus{--tw-ring-color:var(--color-expense)}@media (min-width: 640px){.sm\:col-span-1{grid-column:span 1 / span 1}.sm\:inline{display:inline}.sm\:w-auto{width:auto}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:block{display:block}.md\:flex{display:flex}.md\:hidden{display:none}.md\:max-w-md{max-width:28rem}.md\:max-w-sm{max-width:24rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-center{align-items:center}.md\:gap-8{gap:2rem}.md\:rounded-\[32px\]{border-radius:32px}.md\:p-10{padding:2.5rem}.md\:px-12{padding-left:3rem;padding-right:3rem}.md\:py-12{padding-top:3rem;padding-bottom:3rem}.md\:pb-0{padding-bottom:0px}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-\[3\.5rem\]{font-size:3.5rem}.md\:text-base{font-size:1rem;line-height:1.5rem}}@media (min-width: 1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (prefers-color-scheme: dark){.dark\:border-white\/10{border-color:rgb(255 255 255 / 0.1)}.dark\:bg-black\/70{background-color:rgb(0 0 0 / 0.7)}.dark\:bg-red-900\/10{background-color:rgb(127 29 29 / 0.1)}}</style></head>
+<body class="antialiased h-screen flex flex-col md:flex-row font-sans selection:bg-brand selection:text-white" data-theme="default">
+
+    <!-- Sidebar (Desktop) -->
+    <aside class="hidden md:flex w-72 flex-col bgCard border-r border-[var(--border-color)] p-6 z-10 sticky top-0 h-screen transition-colors duration-300" style="background-color: var(--bg-base);">
+        <div class="flex items-center gap-3 mb-12 pl-2 mt-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-[var(--gradient-1)] to-[var(--gradient-2)] rounded-2xl flex items-center justify-center shadow-brand-glow text-white">
+                <i class="ph-duotone ph-wallet text-2xl"></i>
+            </div>
+            <h2 class="font-display font-extrabold text-2xl tracking-tight text-textMain">Pockets.</h2>
+        </div>
+
+        <nav class="flex-1 space-y-3">
+            <button class="nav-btn active w-full flex items-center gap-4 px-5 py-4 rounded-2xl text-textMuted hover:bg-brandLight hover:text-brand transition-all font-semibold text-left text-[15px]" data-target="dashboard">
+                <i class="ph-duotone ph-squares-four text-2xl"></i> <span data-lang="navDashboard">Dashboard</span>
+            </button>
+            <button class="nav-btn w-full flex items-center gap-4 px-5 py-4 rounded-2xl text-textMuted hover:bg-brandLight hover:text-brand transition-all font-semibold text-left text-[15px]" data-target="transactions">
+                <i class="ph-duotone ph-arrows-left-right text-2xl"></i> <span data-lang="navHistory">History</span>
+            </button>
+            <button class="nav-btn w-full flex items-center gap-4 px-5 py-4 rounded-2xl text-textMuted hover:bg-brandLight hover:text-brand transition-all font-semibold text-left text-[15px]" data-target="wishlist">
+                <i class="ph-duotone ph-star text-2xl"></i> <span data-lang="navWishlist">Wishlist</span>
+            </button>
+            <button class="nav-btn w-full flex items-center gap-4 px-5 py-4 rounded-2xl text-textMuted hover:bg-brandLight hover:text-brand transition-all font-semibold text-left text-[15px]" data-target="analytics">
+                <i class="ph-duotone ph-chart-polar text-2xl"></i> <span data-lang="navAnalytics">Analytics</span>
+            </button>
+        </nav>
+
+        <div class="mt-auto space-y-4">
+            <button class="nav-btn w-full flex items-center gap-4 px-5 py-4 rounded-2xl text-textMuted hover:bg-brandLight hover:text-brand transition-all font-semibold text-left text-[15px]" data-target="settings">
+                <i class="ph-duotone ph-gear-fine text-2xl"></i> <span data-lang="navSettings">Settings</span>
+            </button>
+            
+            <div class="flex items-center gap-4 p-4 bento-card border border-[var(--border-color)] bg-bgCard mt-4">
+                <img id="user-avatar-sidebar" src="./MyPockets ✨ _ Soft Elegance Finance_files/saved_resource(1)" class="w-11 h-11 rounded-full object-cover" alt="Profile">
+                <div class="overflow-hidden">
+                    <p id="user-name-sidebar" class="font-bold text-sm truncate text-textMain">Kayla Meylani</p>
+                    <p class="text-xs text-brand font-semibold truncate">Premium Member</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 relative h-full overflow-y-auto pb-28 md:pb-0 px-5 md:px-12 py-6 md:py-12">
+        
+        <!-- Top Header Mobile -->
+        <header class="md:hidden flex justify-between items-center mb-8">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-[var(--gradient-1)] to-[var(--gradient-2)] rounded-xl flex items-center justify-center text-white shadow-sm">
+                    <i class="ph-duotone ph-wallet text-xl"></i>
+                </div>
+                <h2 class="font-display font-extrabold text-xl tracking-tight text-textMain">Pockets.</h2>
+            </div>
+            <img id="user-avatar-mobile" src="./MyPockets ✨ _ Soft Elegance Finance_files/saved_resource(1)" class="w-11 h-11 rounded-full object-cover border-2 border-brandLight" alt="Profile">
+        </header>
+
+        <!-- VIEW: DASHBOARD (BENTO GRID) -->
+        <section id="view-dashboard" class="view-section active max-w-6xl mx-auto">
+            <div class="mb-8 flex justify-between items-end">
+                <div>
+                    <h1 class="font-display text-3xl md:text-4xl font-extrabold mb-2 text-textMain"><span data-lang="greeting">Hi</span>, <span id="display-name" class="text-gradient">Kayla Meylani</span> ✨</h1>
+                    <p id="dashboard-microcopy" class="text-textMuted font-medium text-sm md:text-base">Siap mengatur keuanganmu hari ini?</p>
+                </div>
+                <div class="hidden md:block w-12 h-12 rounded-full bg-brandLight flex items-center justify-center text-brand">
+                    <i class="ph-duotone ph-bell-ringing text-xl"></i>
+                </div>
+            </div>
+
+            <!-- BENTO GRID -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 mb-8">
+                
+                <!-- Main Balance (Spans 2 cols on desktop) - REDESIGNED -->
+                <div class="bento-card md:col-span-2 p-8 md:p-10 border-none relative overflow-hidden group shadow-brand-glow bg-gradient-to-br" style="background-image: linear-gradient(135deg, var(--gradient-1), var(--gradient-2)); color: white;">
+                    <!-- Decorative blur circles -->
+                    <div class="absolute right-0 top-0 w-48 h-48 bg-white opacity-20 rounded-full blur-3xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+                    <div class="absolute left-0 bottom-0 w-32 h-32 bg-black opacity-10 rounded-full blur-2xl transform -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+                    
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <p class="text-white/80 font-medium text-sm flex items-center gap-2 uppercase tracking-widest">
+                                    <i class="ph-duotone ph-wallet"></i> <span data-lang="totalBalance">Total Balance</span>
+                                </p>
+                                <i class="ph-duotone ph-dots-three text-2xl text-white/80"></i>
+                            </div>
+                            <h2 id="display-balance" class="font-display text-4xl md:text-[3.5rem] font-extrabold mb-8 tracking-tight drop-shadow-sm">Rp&nbsp;4.500.000</h2>
+                        </div>
+                        <div class="flex gap-4">
+                            <button onclick="openModal(&#39;income-modal&#39;)" class="glass-panel text-white px-6 py-3 rounded-2xl font-bold text-sm hover:bg-white/30 transition-all flex items-center gap-2">
+                                <i class="ph-bold ph-plus-circle text-lg"></i> <span data-lang="addIncome">Income</span>
+                            </button>
+                            <button onclick="openModal(&#39;expense-modal&#39;)" class="glass-panel text-white px-6 py-3 rounded-2xl font-bold text-sm hover:bg-white/30 transition-all flex items-center gap-2">
+                                <i class="ph-bold ph-minus-circle text-lg"></i> <span data-lang="addExpense">Expense</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Income & Expense Stack (1 col) -->
+                <div class="grid grid-rows-2 gap-5 md:gap-8">
+                    <div class="bento-card p-6 flex flex-col justify-center bg-bgCard border-borderColor">
+                        <div class="flex items-center gap-3 text-income mb-2">
+                            <div class="w-10 h-10 rounded-2xl bg-income/10 flex items-center justify-center"><i class="ph-duotone ph-trend-up text-xl"></i></div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-textMuted" data-lang="income">Income</span>
+                        </div>
+                        <p id="display-income" class="font-extrabold text-2xl text-textMain mt-1">Rp&nbsp;5.000.000</p>
+                    </div>
+                    <div class="bento-card p-6 flex flex-col justify-center bg-bgCard border-borderColor">
+                        <div class="flex items-center gap-3 text-expense mb-2">
+                            <div class="w-10 h-10 rounded-2xl bg-expense/10 flex items-center justify-center"><i class="ph-duotone ph-trend-down text-xl"></i></div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-textMuted" data-lang="expense">Expense</span>
+                        </div>
+                        <p id="display-expense" class="font-extrabold text-2xl text-textMain mt-1">Rp&nbsp;500.000</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-8">
+                <!-- Recent Activity Bento -->
+                <div class="bento-card p-7 flex flex-col h-full bg-bgCard">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-display font-extrabold text-lg text-textMain" data-lang="recentActivity">Recent Activity</h3>
+                        <button class="text-brand text-sm font-bold hover:opacity-80 transition" onclick="switchView(&#39;transactions&#39;)" data-lang="seeAll">See All</button>
+                    </div>
+                    <div id="recent-transactions" class="space-y-4 flex-1"><div class="flex items-center justify-between py-3">
+                <div class="flex items-center gap-4 overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-expense/10 text-expense">
+                        <i class="ph-duotone ph-sparkle text-2xl"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-[15px] text-textMain truncate">Kecantikan</p>
+                        <p class="text-[13px] text-textMuted truncate font-medium mt-0.5">Skincare</p>
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <p class="font-extrabold text-[15px] text-textMain">-Rp&nbsp;350.000</p>
+                    <p class="text-[11px] text-textMuted font-bold uppercase tracking-widest mt-1">30 Mei</p>
+                </div>
+            </div><div class="flex items-center justify-between py-3">
+                <div class="flex items-center gap-4 overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-expense/10 text-expense">
+                        <i class="ph-duotone ph-hamburger text-2xl"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-[15px] text-textMain truncate">Makanan</p>
+                        <p class="text-[13px] text-textMuted truncate font-medium mt-0.5">Cafe hopping</p>
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <p class="font-extrabold text-[15px] text-textMain">-Rp&nbsp;150.000</p>
+                    <p class="text-[11px] text-textMuted font-bold uppercase tracking-widest mt-1">30 Mei</p>
+                </div>
+            </div><div class="flex items-center justify-between py-3">
+                <div class="flex items-center gap-4 overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-income/10 text-income">
+                        <i class="ph-duotone ph-money text-2xl"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-[15px] text-textMain truncate">Gaji</p>
+                        <p class="text-[13px] text-textMuted truncate font-medium mt-0.5">Gaji Bulanan</p>
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <p class="font-extrabold text-[15px] text-income">+Rp&nbsp;5.000.000</p>
+                    <p class="text-[11px] text-textMuted font-bold uppercase tracking-widest mt-1">30 Mei</p>
+                </div>
+            </div></div>
+                    <div id="empty-transactions" class="text-center py-12 hidden flex-1 flex-col justify-center items-center">
+                        <div class="w-20 h-20 bg-brandLight rounded-full flex items-center justify-center mb-4">
+                            <i class="ph-duotone ph-receipt text-4xl text-brand"></i>
+                        </div>
+                        <p class="text-textMuted text-sm font-medium">Belum ada transaksi bulan ini.</p>
+                    </div>
+                </div>
+
+                <!-- Quick Wishlist Bento -->
+                <div class="bento-card p-7 flex flex-col h-full bg-bgCard relative overflow-hidden">
+                    <div class="absolute right-0 bottom-0 w-32 h-32 bg-brandLight rounded-tl-full opacity-50 pointer-events-none"></div>
+                    <div class="flex justify-between items-center mb-6 relative z-10">
+                        <h3 class="font-display font-extrabold text-lg text-textMain" data-lang="priorityWishlist">Dream Goals</h3>
+                        <button class="bg-brandLight text-brand w-10 h-10 rounded-full flex items-center justify-center hover:bg-brand hover:text-white transition-all shadow-sm" onclick="openModal(&#39;wishlist-modal&#39;)">
+                            <i class="ph-bold ph-plus text-lg"></i>
+                        </button>
+                    </div>
+                    <div id="dashboard-wishlist" class="space-y-5 flex-1 relative z-10"><div class="bg-bgCard border border-[var(--border-color)] p-4 rounded-2xl shadow-sm hover:shadow-md transition">
+                <div class="flex justify-between items-center mb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl bg-brandLight w-10 h-10 rounded-xl flex items-center justify-center">👜</span>
+                        <span class="font-bold text-sm text-textMain">Tas Branded</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-brand">43%</span>
+                </div>
+                <div class="w-full bg-bgBase rounded-full h-2 overflow-hidden">
+                    <div class="bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] h-2 rounded-full" style="width: 42.857142857142854%"></div>
+                </div>
+            </div><div class="bg-bgCard border border-[var(--border-color)] p-4 rounded-2xl shadow-sm hover:shadow-md transition">
+                <div class="flex justify-between items-center mb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl bg-brandLight w-10 h-10 rounded-xl flex items-center justify-center">✈️</span>
+                        <span class="font-bold text-sm text-textMain">Liburan Bali</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-brand">10%</span>
+                </div>
+                <div class="w-full bg-bgBase rounded-full h-2 overflow-hidden">
+                    <div class="bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] h-2 rounded-full" style="width: 10%"></div>
+                </div>
+            </div></div>
+                     <div id="empty-dashboard-wishlist" class="text-center py-12 hidden flex-1 flex-col justify-center items-center relative z-10">
+                        <div class="w-20 h-20 bg-brandLight rounded-full flex items-center justify-center mb-4">
+                            <i class="ph-duotone ph-shooting-star text-4xl text-brand"></i>
+                        </div>
+                        <p class="text-textMuted text-sm font-medium">Wujudkan impian pertamamu!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW: TRANSACTIONS -->
+        <section id="view-transactions" class="view-section max-w-4xl mx-auto">
+            <h2 class="font-display text-3xl font-extrabold mb-8 text-textMain" data-lang="navHistory">History</h2>
+            
+            <div class="flex gap-3 overflow-x-auto hide-scrollbar mb-8 pb-2">
+                <button class="px-6 py-3 rounded-2xl bg-textMain text-bgBase font-bold text-sm whitespace-nowrap shadow-md" id="filter-all">Semua</button>
+                <button class="px-6 py-3 rounded-2xl bg-bgCard border border-[var(--border-color)] text-textMuted font-bold text-sm whitespace-nowrap hover:text-brand hover:border-brandLight transition" id="filter-in">Pemasukan</button>
+                <button class="px-6 py-3 rounded-2xl bg-bgCard border border-[var(--border-color)] text-textMuted font-bold text-sm whitespace-nowrap hover:text-brand hover:border-brandLight transition" id="filter-out">Pengeluaran</button>
+            </div>
+
+            <div class="bento-card overflow-hidden bg-bgCard">
+                <div id="all-transactions-list" class="divide-y divide-[var(--border-color)]"><div class="flex items-center justify-between p-5 hover:bg-bgBase transition">
+                <div class="flex items-center gap-4 overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-expense/10 text-expense">
+                        <i class="ph-duotone ph-sparkle text-2xl"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-[15px] text-textMain truncate">Kecantikan</p>
+                        <p class="text-[13px] text-textMuted truncate font-medium mt-0.5">Skincare</p>
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <p class="font-extrabold text-[15px] text-textMain">-Rp&nbsp;350.000</p>
+                    <p class="text-[11px] text-textMuted font-bold uppercase tracking-widest mt-1">30 Mei</p>
+                </div>
+            </div><div class="flex items-center justify-between p-5 hover:bg-bgBase transition">
+                <div class="flex items-center gap-4 overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-expense/10 text-expense">
+                        <i class="ph-duotone ph-hamburger text-2xl"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-[15px] text-textMain truncate">Makanan</p>
+                        <p class="text-[13px] text-textMuted truncate font-medium mt-0.5">Cafe hopping</p>
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <p class="font-extrabold text-[15px] text-textMain">-Rp&nbsp;150.000</p>
+                    <p class="text-[11px] text-textMuted font-bold uppercase tracking-widest mt-1">30 Mei</p>
+                </div>
+            </div><div class="flex items-center justify-between p-5 hover:bg-bgBase transition">
+                <div class="flex items-center gap-4 overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 bg-income/10 text-income">
+                        <i class="ph-duotone ph-money text-2xl"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-[15px] text-textMain truncate">Gaji</p>
+                        <p class="text-[13px] text-textMuted truncate font-medium mt-0.5">Gaji Bulanan</p>
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <p class="font-extrabold text-[15px] text-income">+Rp&nbsp;5.000.000</p>
+                    <p class="text-[11px] text-textMuted font-bold uppercase tracking-widest mt-1">30 Mei</p>
+                </div>
+            </div></div>
+            </div>
+        </section>
+
+        <!-- VIEW: WISHLIST -->
+        <section id="view-wishlist" class="view-section max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="font-display text-3xl font-extrabold mb-2 text-textMain" data-lang="navWishlist">Wishlist</h2>
+                    <p class="text-textMuted font-medium text-sm" data-lang="wishlistSub">Keep saving for the things you love!</p>
+                </div>
+                <button onclick="openModal(&#39;wishlist-modal&#39;)" class="bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] text-white px-6 py-3 rounded-2xl font-bold text-sm hover:opacity-90 transition-all flex items-center gap-2 shadow-brand-glow">
+                    <i class="ph-bold ph-plus"></i> <span class="hidden sm:inline">Target Baru</span>
+                </button>
+            </div>
+
+            <div id="wishlist-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"><div class="bento-card p-6 relative overflow-hidden flex flex-col justify-between bg-bgCard ">
+                <div>
+                    <div class="flex justify-between items-start mb-5">
+                        <div class="w-14 h-14 bg-brandLight rounded-2xl flex items-center justify-center text-3xl shadow-sm">👜</div>
+                        <button onclick="deleteWishlist(&#39;1780140696178&#39;)" class="text-textMuted hover:text-expense hover:bg-expense/10 transition p-2 bg-bgBase rounded-full"><i class="ph-bold ph-trash"></i></button>
+                    </div>
+                    <h3 class="font-extrabold text-xl text-textMain mb-6">Tas Branded</h3>
+                    
+                    <div class="space-y-2 mb-2">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-textMuted">Rp&nbsp;1.500.000</span>
+                            <span class="text-brand">43%</span>
+                        </div>
+                        <div class="w-full bg-bgBase border border-[var(--border-color)] rounded-full h-3 overflow-hidden shadow-inner">
+                            <div class="bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] h-full rounded-full transition-all duration-500" style="width: 42.857142857142854%"></div>
+                        </div>
+                        <div class="text-right text-[11px] text-textMuted font-bold uppercase tracking-widest mt-2">Target: Rp&nbsp;3.500.000</div>
+                    </div>
+                </div>
+                <button onclick="openFundModal(&#39;1780140696178&#39;, &#39;Tas Branded&#39;)" class="mt-6 w-full bg-bgBase border border-[var(--border-color)] text-textMain font-bold py-3 rounded-2xl text-sm hover:bg-textMain hover:text-bgBase transition shadow-sm">Nabung</button>
+            </div><div class="bento-card p-6 relative overflow-hidden flex flex-col justify-between bg-bgCard ">
+                <div>
+                    <div class="flex justify-between items-start mb-5">
+                        <div class="w-14 h-14 bg-brandLight rounded-2xl flex items-center justify-center text-3xl shadow-sm">✈️</div>
+                        <button onclick="deleteWishlist(&#39;1780140796178&#39;)" class="text-textMuted hover:text-expense hover:bg-expense/10 transition p-2 bg-bgBase rounded-full"><i class="ph-bold ph-trash"></i></button>
+                    </div>
+                    <h3 class="font-extrabold text-xl text-textMain mb-6">Liburan Bali</h3>
+                    
+                    <div class="space-y-2 mb-2">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-textMuted">Rp&nbsp;500.000</span>
+                            <span class="text-brand">10%</span>
+                        </div>
+                        <div class="w-full bg-bgBase border border-[var(--border-color)] rounded-full h-3 overflow-hidden shadow-inner">
+                            <div class="bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] h-full rounded-full transition-all duration-500" style="width: 10%"></div>
+                        </div>
+                        <div class="text-right text-[11px] text-textMuted font-bold uppercase tracking-widest mt-2">Target: Rp&nbsp;5.000.000</div>
+                    </div>
+                </div>
+                <button onclick="openFundModal(&#39;1780140796178&#39;, &#39;Liburan Bali&#39;)" class="mt-6 w-full bg-bgBase border border-[var(--border-color)] text-textMain font-bold py-3 rounded-2xl text-sm hover:bg-textMain hover:text-bgBase transition shadow-sm">Nabung</button>
+            </div></div>
+        </section>
+
+        <!-- VIEW: ANALYTICS -->
+        <section id="view-analytics" class="view-section max-w-4xl mx-auto">
+            <h2 class="font-display text-3xl font-extrabold mb-8 text-textMain" data-lang="navAnalytics">Analytics</h2>
+            
+            <div class="bento-card p-8 md:p-10 mb-8 bg-bgCard">
+                <h3 class="font-display font-extrabold mb-8 text-center text-xl text-textMain">Ringkasan Arus Kas</h3>
+                <div class="relative h-80 w-full flex justify-center">
+                    <canvas id="financeChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW: SETTINGS -->
+        <section id="view-settings" class="view-section max-w-3xl mx-auto">
+            <h2 class="font-display text-3xl font-extrabold mb-8 text-textMain" data-lang="navSettings">Settings</h2>
+            
+            <div class="space-y-8">
+                <!-- Profile Settings -->
+                <div class="bento-card p-8 bg-bgCard border-none relative overflow-hidden">
+                    <div class="absolute right-0 top-0 w-32 h-32 bg-brandLight rounded-bl-full opacity-50"></div>
+                    <h3 class="font-display font-bold mb-6 text-sm uppercase tracking-widest text-brand" data-lang="profileTitle">Profile</h3>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8 relative z-10">
+                        <div class="relative">
+                            <img id="settings-avatar" src="./MyPockets ✨ _ Soft Elegance Finance_files/saved_resource(1)" class="w-24 h-24 rounded-full object-cover border-4 border-bgBase shadow-sm" alt="Avatar">
+                            <div class="absolute bottom-0 right-0 w-8 h-8 bg-brand text-white rounded-full flex items-center justify-center border-2 border-bgCard"><i class="ph-bold ph-camera"></i></div>
+                        </div>
+                        <div class="w-full sm:w-auto flex-1">
+                            <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-wider">Nama Panggilan</label>
+                            <input type="text" id="input-username" class="bg-bgBase border-none rounded-2xl px-5 py-4 w-full text-textMain font-bold focus:ring-2 focus:ring-brand transition" placeholder="Masukkan nama...">
+                        </div>
+                    </div>
+                    <button onclick="saveProfile()" class="bg-textMain text-bgBase px-8 py-4 rounded-2xl text-sm font-bold hover:bg-opacity-80 transition w-full sm:w-auto shadow-md">Simpan Perubahan</button>
+                </div>
+
+                <!-- Theme Settings -->
+                <div class="bento-card p-8 bg-bgCard">
+                    <h3 class="font-display font-bold mb-6 text-sm uppercase tracking-widest text-brand" data-lang="themeTitle">Appearance</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <button class="theme-btn p-5 rounded-3xl flex flex-col items-center gap-4 border-2 border-transparent hover:border-brand transition bg-bgBase" data-set-theme="default">
+                            <div class="w-12 h-12 rounded-full bg-[#FCF9F9] shadow-sm flex items-center justify-center"><div class="w-6 h-6 bg-[#FF8BA7] rounded-full"></div></div>
+                            <span class="text-sm font-bold text-textMain">Rose Elegance</span>
+                        </button>
+                        <button class="theme-btn p-5 rounded-3xl flex flex-col items-center gap-4 border-2 border-transparent hover:border-brand transition bg-bgBase" data-set-theme="lavender">
+                            <div class="w-12 h-12 rounded-full bg-[#F8F6FC] shadow-sm flex items-center justify-center"><div class="w-6 h-6 bg-[#A78BFA] rounded-full"></div></div>
+                            <span class="text-sm font-bold text-textMain">Lavender</span>
+                        </button>
+                        <button class="theme-btn p-5 rounded-3xl flex flex-col items-center gap-4 border-2 border-transparent hover:border-brand transition bg-bgBase" data-set-theme="sage">
+                            <div class="w-12 h-12 rounded-full bg-[#F6FBF7] shadow-sm flex items-center justify-center"><div class="w-6 h-6 bg-[#86A789] rounded-full"></div></div>
+                            <span class="text-sm font-bold text-textMain">Sage Minimal</span>
+                        </button>
+                        <button class="theme-btn p-5 rounded-3xl flex flex-col items-center gap-4 border-2 border-transparent hover:border-brand transition bg-[#1A1A1A]" data-set-theme="dark">
+                            <div class="w-12 h-12 rounded-full bg-[#121212] border border-gray-800 flex items-center justify-center"><div class="w-6 h-6 bg-[#FFB5A7] rounded-full"></div></div>
+                            <span class="text-sm font-bold text-white">Midnight Rose</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Language Settings -->
+                <div class="bento-card p-8 bg-bgCard">
+                    <h3 class="font-display font-bold mb-6 text-sm uppercase tracking-widest text-brand" data-lang="langTitle">Language</h3>
+                    <div class="flex gap-4">
+                        <button onclick="changeLanguage(&#39;id&#39;)" id="lang-id" class="px-8 py-4 rounded-2xl bg-textMain text-bgBase font-bold text-sm shadow-md transition">🇮🇩 Indonesia</button>
+                        <button onclick="changeLanguage(&#39;en&#39;)" id="lang-en" class="px-8 py-4 rounded-2xl bg-bgBase border border-[var(--border-color)] text-textMuted font-bold text-sm hover:text-textMain hover:border-textMain transition">🇺🇸 English</button>
+                    </div>
+                </div>
+                
+                <!-- Danger Zone -->
+                 <div class="bento-card p-8 border-expense/30 bg-red-50/50 dark:bg-red-900/10">
+                    <h3 class="font-display font-bold mb-3 text-sm uppercase tracking-widest text-expense">Zona Berbahaya</h3>
+                    <p class="text-sm text-textMuted mb-6 font-medium">Tindakan ini akan menghapus seluruh data keuangan dan impianmu secara permanen dari perangkat ini.</p>
+                    <button onclick="resetData()" class="px-8 py-4 rounded-2xl bg-expense text-white font-bold text-sm shadow-sm hover:bg-red-600 transition flex items-center gap-2"><i class="ph-bold ph-warning"></i> Reset Semua Data</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mobile Floating Pill Navigation (Glassmorphism) -->
+    <div class="md:hidden fixed bottom-6 left-1/2 transform -translate-x-1/2 z-40 w-[92%] max-w-sm">
+        <nav class="bg-white/70 dark:bg-black/70 backdrop-blur-xl border border-white/20 dark:border-white/10 text-textMuted rounded-[2rem] shadow-glass px-8 py-5 flex justify-between items-center">
+            <button class="nav-btn-mobile text-brand flex flex-col items-center transition-transform hover:scale-110" data-target="dashboard">
+                <i class="ph-duotone ph-squares-four text-3xl"></i>
+            </button>
+            <button class="nav-btn-mobile hover:text-brand flex flex-col items-center transition-transform hover:scale-110" data-target="transactions">
+                <i class="ph-duotone ph-arrows-left-right text-3xl"></i>
+            </button>
+            <button class="nav-btn-mobile hover:text-brand flex flex-col items-center transition-transform hover:scale-110" data-target="wishlist">
+                <i class="ph-duotone ph-star text-3xl"></i>
+            </button>
+            <button class="nav-btn-mobile hover:text-brand flex flex-col items-center transition-transform hover:scale-110" data-target="settings">
+                <i class="ph-duotone ph-gear-fine text-3xl"></i>
+            </button>
+        </nav>
+    </div>
+
+    <!-- MODALS (Soft UI Style) -->
+
+    <!-- Income Modal -->
+    <div id="income-modal" class="modal-overlay fixed inset-0 flex items-end md:items-center justify-center">
+        <div class="modal-content bg-bgCard w-full md:max-w-md rounded-t-[32px] md:rounded-[32px] shadow-2xl p-8 border border-[var(--border-color)]">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center gap-3 text-income">
+                    <div class="w-10 h-10 bg-income/10 rounded-xl flex items-center justify-center"><i class="ph-bold ph-trend-up"></i></div>
+                    <h3 class="font-display font-extrabold text-xl text-textMain">Catat Pemasukan</h3>
+                </div>
+                <button onclick="closeModal(&#39;income-modal&#39;)" class="w-10 h-10 bg-bgBase rounded-full flex items-center justify-center text-textMuted hover:text-textMain transition"><i class="ph-bold ph-x"></i></button>
+            </div>
+            <form id="form-income" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Jumlah (Rp)</label>
+                    <input type="number" id="inc-amount" required="" class="w-full bg-bgBase border-none rounded-2xl px-6 py-5 text-3xl font-extrabold text-textMain focus:ring-2 focus:ring-income transition" placeholder="0">
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="col-span-2 sm:col-span-1">
+                        <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Kategori</label>
+                        <select id="inc-category" class="w-full bg-bgBase border-none rounded-2xl px-5 py-4 text-sm font-bold text-textMain focus:ring-2 focus:ring-income transition appearance-none">
+                            <option value="Gaji">Gaji 💰</option>
+                            <option value="Freelance">Freelance 💻</option>
+                            <option value="Hadiah">Hadiah 🎁</option>
+                            <option value="Lainnya">Lainnya ✨</option>
+                        </select>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Catatan</label>
+                        <input type="text" id="inc-note" class="w-full bg-bgBase border-none rounded-2xl px-5 py-4 text-sm font-bold text-textMain focus:ring-2 focus:ring-income transition" placeholder="Opsional">
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-income text-white font-bold py-4 rounded-2xl mt-4 hover:opacity-90 transition shadow-lg shadow-income/30 text-lg">Simpan Pemasukan</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Expense Modal -->
+    <div id="expense-modal" class="modal-overlay fixed inset-0 flex items-end md:items-center justify-center">
+        <div class="modal-content bg-bgCard w-full md:max-w-md rounded-t-[32px] md:rounded-[32px] shadow-2xl p-8 border border-[var(--border-color)]">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center gap-3 text-expense">
+                    <div class="w-10 h-10 bg-expense/10 rounded-xl flex items-center justify-center"><i class="ph-bold ph-trend-down"></i></div>
+                    <h3 class="font-display font-extrabold text-xl text-textMain">Catat Pengeluaran</h3>
+                </div>
+                <button onclick="closeModal(&#39;expense-modal&#39;)" class="w-10 h-10 bg-bgBase rounded-full flex items-center justify-center text-textMuted hover:text-textMain transition"><i class="ph-bold ph-x"></i></button>
+            </div>
+            <form id="form-expense" class="space-y-6">
+                <div>
+                    <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Jumlah (Rp)</label>
+                    <input type="number" id="exp-amount" required="" class="w-full bg-bgBase border-none rounded-2xl px-6 py-5 text-3xl font-extrabold text-textMain focus:ring-2 focus:ring-expense transition" placeholder="0">
+                </div>
+                <div class="grid grid-cols-2 gap-5">
+                    <div class="col-span-2 sm:col-span-1">
+                        <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Kategori</label>
+                        <select id="exp-category" class="w-full bg-bgBase border-none rounded-2xl px-5 py-4 text-sm font-bold text-textMain focus:ring-2 focus:ring-expense transition appearance-none">
+                            <option value="Makanan">Makanan 🍔</option>
+                            <option value="Belanja">Belanja 🛍️</option>
+                            <option value="Transportasi">Transportasi 🚗</option>
+                            <option value="Kecantikan">Kecantikan 💅</option>
+                            <option value="Tagihan">Tagihan 📱</option>
+                            <option value="Lainnya">Lainnya ❓</option>
+                        </select>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Catatan</label>
+                        <input type="text" id="exp-note" class="w-full bg-bgBase border-none rounded-2xl px-5 py-4 text-sm font-bold text-textMain focus:ring-2 focus:ring-expense transition" placeholder="Opsional">
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-expense text-white font-bold py-4 rounded-2xl mt-4 hover:opacity-90 transition shadow-lg shadow-expense/30 text-lg">Simpan Pengeluaran</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlist-modal" class="modal-overlay fixed inset-0 flex items-end md:items-center justify-center">
+        <div class="modal-content bg-bgCard w-full md:max-w-md rounded-t-[32px] md:rounded-[32px] shadow-2xl p-8 border border-[var(--border-color)]">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex items-center gap-3 text-brand">
+                    <div class="w-10 h-10 bg-brandLight rounded-xl flex items-center justify-center"><i class="ph-bold ph-star"></i></div>
+                    <h3 class="font-display font-extrabold text-xl text-textMain">Target Baru</h3>
+                </div>
+                <button onclick="closeModal(&#39;wishlist-modal&#39;)" class="w-10 h-10 bg-bgBase rounded-full flex items-center justify-center text-textMuted hover:text-textMain transition"><i class="ph-bold ph-x"></i></button>
+            </div>
+            <form id="form-wishlist" class="space-y-5">
+                <div>
+                    <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Nama Impian</label>
+                    <input type="text" id="wl-name" required="" class="w-full bg-bgBase border-none rounded-2xl px-5 py-4 text-sm font-bold text-textMain focus:ring-2 focus:ring-brand transition" placeholder="Cth: Skincare Bulanan, Liburan...">
+                </div>
+                <div class="grid grid-cols-3 gap-5">
+                    <div class="col-span-1">
+                        <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Emoji</label>
+                        <input type="text" id="wl-icon" required="" maxlength="2" class="w-full bg-bgBase border-none rounded-2xl px-5 py-4 text-center text-xl focus:ring-2 focus:ring-brand transition" placeholder="✨" value="✨">
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Target (Rp)</label>
+                        <input type="number" id="wl-target" required="" class="w-full bg-bgBase border-none rounded-2xl px-5 py-4 text-sm font-bold text-textMain focus:ring-2 focus:ring-brand transition" placeholder="0">
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] text-white font-bold py-4 rounded-2xl mt-4 hover:opacity-90 transition shadow-brand-glow text-lg">Buat Target</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Fund Modal -->
+    <div id="fund-modal" class="modal-overlay fixed inset-0 flex items-end md:items-center justify-center">
+        <div class="modal-content bg-bgCard w-full md:max-w-sm rounded-t-[32px] md:rounded-[32px] shadow-2xl p-8 border border-[var(--border-color)]">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="font-display font-extrabold text-xl">Nabung Impian</h3>
+                <button onclick="closeModal(&#39;fund-modal&#39;)" class="w-10 h-10 bg-bgBase rounded-full flex items-center justify-center text-textMuted hover:text-textMain transition"><i class="ph-bold ph-x"></i></button>
+            </div>
+            <p id="fund-target-name" class="text-sm font-bold text-brand mb-8 bg-brandLight px-4 py-2 rounded-xl inline-block">Target: -</p>
+            <form id="form-fund" class="space-y-6">
+                <input type="hidden" id="fund-id">
+                <div>
+                    <label class="block text-xs font-bold text-textMuted mb-2 uppercase tracking-widest">Masukin Dana (Rp)</label>
+                    <input type="number" id="fund-amount" required="" class="w-full bg-bgBase border-none rounded-2xl px-6 py-5 text-3xl font-extrabold text-textMain focus:ring-2 focus:ring-brand transition" placeholder="0">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] text-white font-bold py-4 rounded-2xl mt-2 hover:opacity-90 transition shadow-brand-glow text-lg">Simpan Uang</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-container" class="fixed top-8 left-1/2 transform -translate-x-1/2 flex flex-col gap-3 pointer-events-none z-[10000]">
+        <!-- Toasts injected here -->
+    </div>
+
+    <script>
+        // --- STATE MANAGEMENT ---
+        let state = {
+            user: { name: 'Sultan Muda', avatar: 'https://ui-avatars.com/api/?name=Sultan+Muda&background=random' },
+            balance: 0,
+            totalIncome: 0,
+            totalExpense: 0,
+            transactions: [],
+            wishlists: [],
+            settings: { theme: 'default', language: 'id' }
+        };
+
+        const dict = {
+            id: {
+                navDashboard: "Beranda",
+                navHistory: "Riwayat",
+                navWishlist: "Wishlist",
+                navAnalytics: "Analitik",
+                navSettings: "Setelan",
+                greeting: "Halo",
+                totalBalance: "Total Saldo",
+                income: "Pemasukan",
+                expense: "Pengeluaran",
+                recentActivity: "Aktivitas Terakhir",
+                priorityWishlist: "Target Impian",
+                seeAll: "Lihat Semua",
+                addIncome: "Pemasukan",
+                addExpense: "Pengeluaran",
+                wishlistSub: "Tetap fokus menabung untuk hal yang kamu cintai!",
+                themeTitle: "Tema Tampilan",
+                langTitle: "Bahasa",
+                profileTitle: "Profil",
+                saved: "Terkumpul",
+                target: "Target",
+                achieved: "Tercapai 🎉",
+                addFund: "Nabung",
+                emptyTrans: "Belum ada transaksi bulan ini."
+            },
+            en: {
+                navDashboard: "Dashboard",
+                navHistory: "History",
+                navWishlist: "Wishlist",
+                navAnalytics: "Analytics",
+                navSettings: "Settings",
+                greeting: "Hi",
+                totalBalance: "Total Balance",
+                income: "Income",
+                expense: "Expense",
+                recentActivity: "Recent Activity",
+                priorityWishlist: "Dream Goals",
+                seeAll: "See All",
+                addIncome: "Income",
+                addExpense: "Expense",
+                wishlistSub: "Keep saving for the things you love!",
+                themeTitle: "Appearance",
+                langTitle: "Language",
+                profileTitle: "Profile",
+                saved: "Saved",
+                target: "Target",
+                achieved: "Achieved 🎉",
+                addFund: "Add Fund",
+                emptyTrans: "No transactions this month."
+            }
+        };
+
+        let currentChart = null;
+
+        // --- INITIALIZATION ---
+        function init() {
+            loadState();
+            applyTheme(state.settings.theme);
+            applyLanguage(state.settings.language);
+            updateUI();
+            
+            document.querySelectorAll('.nav-btn, .nav-btn-mobile').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    switchView(e.currentTarget.getAttribute('data-target'));
+                });
+            });
+
+            document.querySelectorAll('.theme-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    setTheme(e.currentTarget.getAttribute('data-set-theme'));
+                });
+            });
+
+            document.getElementById('input-username').value = state.user.name;
+        }
+
+        // --- LOCAL STORAGE ---
+        function saveState() {
+            localStorage.setItem('myPocketsSoftUI', JSON.stringify(state));
+            updateUI();
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem('myPocketsSoftUI');
+            if (saved) {
+                state = JSON.parse(saved);
+            } else {
+                state.transactions = [
+                    { id: Date.now()-100000, type: 'income', amount: 5000000, category: 'Gaji', note: 'Gaji Bulanan', date: new Date().toISOString() },
+                    { id: Date.now()-50000, type: 'expense', amount: 350000, category: 'Kecantikan', note: 'Skincare', date: new Date().toISOString() },
+                    { id: Date.now()-20000, type: 'expense', amount: 150000, category: 'Makanan', note: 'Cafe hopping', date: new Date().toISOString() }
+                ];
+                state.wishlists = [
+                    { id: Date.now()-200000, title: 'Tas Branded', icon: '👜', target: 3500000, saved: 1500000, status: 'progress' },
+                    { id: Date.now()-100000, title: 'Liburan Bali', icon: '✈️', target: 5000000, saved: 500000, status: 'progress' }
+                ];
+                recalculateBalance();
+                saveState();
+            }
+        }
+
+        function resetData() {
+            if(confirm("Hapus seluruh data secara permanen?")) {
+                localStorage.removeItem('myPocketsSoftUI');
+                location.reload();
+            }
+        }
+
+        // --- UTILITIES ---
+        const formatMoney = (amount) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(amount);
+        const formatDate = (isoString) => new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short' }).format(new Date(isoString));
+        const generateId = () => Date.now().toString(36) + Math.random().toString(36).substr(2);
+
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            // Using gradient for success to match brand
+            const bgClass = type === 'success' ? 'bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)]' : 'bg-expense';
+            const icon = type === 'success' ? 'ph-check-circle' : 'ph-warning-circle';
+
+            toast.className = `${bgClass} text-white px-6 py-4 rounded-full shadow-soft flex items-center gap-3 toast font-bold text-sm`;
+            toast.innerHTML = `<i class="ph-fill ${icon} text-xl"></i> <span>${message}</span>`;
+            
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.add('show'), 10);
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        // --- UI UPDATES ---
+        function switchView(viewId) {
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            document.getElementById(`view-${viewId}`).classList.add('active');
+
+            // Desktop Nav
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                if(btn.getAttribute('data-target') === viewId) {
+                    btn.classList.add('active');
+                    btn.classList.remove('text-textMuted');
+                } else {
+                    btn.classList.remove('active');
+                    btn.classList.add('text-textMuted');
+                }
+            });
+
+            // Mobile Nav
+            document.querySelectorAll('.nav-btn-mobile').forEach(btn => {
+                if(btn.getAttribute('data-target') === viewId) {
+                    btn.classList.add('text-brand');
+                    btn.classList.remove('text-textMuted', 'dark:text-white/50');
+                } else {
+                    btn.classList.remove('text-brand');
+                    btn.classList.add('text-textMuted', 'dark:text-white/50');
+                }
+            });
+
+            if (viewId === 'analytics') renderChart();
+        }
+
+        function updateUI() {
+            recalculateBalance();
+            
+            document.getElementById('display-name').innerText = state.user.name;
+            document.getElementById('user-name-sidebar').innerText = state.user.name;
+            document.getElementById('user-avatar-sidebar').src = state.user.avatar;
+            document.getElementById('user-avatar-mobile').src = state.user.avatar;
+            document.getElementById('settings-avatar').src = state.user.avatar;
+
+            document.getElementById('display-balance').innerText = formatMoney(state.balance);
+            document.getElementById('display-income').innerText = formatMoney(state.totalIncome);
+            document.getElementById('display-expense').innerText = formatMoney(state.totalExpense);
+
+            renderTransactions();
+            renderWishlists();
+            if(document.getElementById('view-analytics').classList.contains('active')) renderChart();
+        }
+
+        function recalculateBalance() {
+            let inc = 0, exp = 0;
+            state.transactions.forEach(t => {
+                if(t.type === 'income') inc += parseFloat(t.amount);
+                if(t.type === 'expense') exp += parseFloat(t.amount);
+            });
+            state.totalIncome = inc;
+            state.totalExpense = exp;
+            state.balance = inc - exp;
+        }
+
+        function saveProfile() {
+            const name = document.getElementById('input-username').value || 'User';
+            state.user.name = name;
+            state.user.avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=random`;
+            saveState();
+            showToast('Profil berhasil diperbarui! ✨');
+        }
+
+        // --- RENDERING LISTS ---
+        function getCategoryIcon(cat, type) {
+            const icons = {
+                'Makanan': 'ph-hamburger', 'Belanja': 'ph-tote', 'Transportasi': 'ph-car', 
+                'Kecantikan': 'ph-sparkle', 'Tagihan': 'ph-receipt',
+                'Gaji': 'ph-money', 'Freelance': 'ph-laptop', 'Hadiah': 'ph-gift'
+            };
+            return icons[cat] || (type === 'income' ? 'ph-trend-up' : 'ph-trend-down');
+        }
+
+        function renderTransactions(filter = 'all') {
+            const recentContainer = document.getElementById('recent-transactions');
+            const allContainer = document.getElementById('all-transactions-list');
+            const emptyRecent = document.getElementById('empty-transactions');
+            
+            let sorted = [...state.transactions].sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            recentContainer.innerHTML = '';
+            if (sorted.length === 0) {
+                emptyRecent.classList.remove('hidden');
+                emptyRecent.classList.add('flex');
+            } else {
+                emptyRecent.classList.add('hidden');
+                emptyRecent.classList.remove('flex');
+                sorted.slice(0, 4).forEach(t => recentContainer.appendChild(createTransactionCard(t, false)));
+            }
+
+            allContainer.innerHTML = '';
+            let filtered = filter !== 'all' ? sorted.filter(t => t.type === filter) : sorted;
+            
+            if(filtered.length === 0) {
+                allContainer.innerHTML = `<div class="text-center py-12 text-textMuted font-medium">${dict[state.settings.language].emptyTrans}</div>`;
+            } else {
+                filtered.forEach(t => allContainer.appendChild(createTransactionCard(t, true)));
+            }
+        }
+
+        function createTransactionCard(t, isList) {
+            const div = document.createElement('div');
+            const isInc = t.type === 'income';
+            const sign = isInc ? '+' : '-';
+            
+            div.className = `flex items-center justify-between ${isList ? 'p-5 hover:bg-bgBase transition' : 'py-3'}`;
+            div.innerHTML = `
+                <div class="flex items-center gap-4 overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 ${isInc ? 'bg-income/10 text-income' : 'bg-expense/10 text-expense'}">
+                        <i class="ph-duotone ${getCategoryIcon(t.category, t.type)} text-2xl"></i>
+                    </div>
+                    <div class="truncate">
+                        <p class="font-bold text-[15px] text-textMain truncate">${t.category}</p>
+                        <p class="text-[13px] text-textMuted truncate font-medium mt-0.5">${t.note || 'Transaksi'}</p>
+                    </div>
+                </div>
+                <div class="text-right shrink-0">
+                    <p class="font-extrabold text-[15px] ${isInc ? 'text-income' : 'text-textMain'}">${sign}${formatMoney(t.amount)}</p>
+                    <p class="text-[11px] text-textMuted font-bold uppercase tracking-widest mt-1">${formatDate(t.date)}</p>
+                </div>
+            `;
+            return div;
+        }
+
+        function renderWishlists() {
+            const dashContainer = document.getElementById('dashboard-wishlist');
+            const mainContainer = document.getElementById('wishlist-grid');
+            const emptyDash = document.getElementById('empty-dashboard-wishlist');
+            
+            dashContainer.innerHTML = '';
+            mainContainer.innerHTML = '';
+            
+            const lang = dict[state.settings.language];
+
+            if(state.wishlists.length === 0) {
+                emptyDash.classList.remove('hidden');
+                emptyDash.classList.add('flex');
+            } else {
+                emptyDash.classList.add('hidden');
+                emptyDash.classList.remove('flex');
+                
+                const active = state.wishlists.filter(w => w.status !== 'achieved');
+                active.slice(0, 3).forEach(w => dashContainer.appendChild(createWishlistMiniCard(w)));
+                state.wishlists.forEach(w => mainContainer.appendChild(createWishlistCard(w, lang)));
+            }
+        }
+
+        function createWishlistMiniCard(w) {
+            const percentage = Math.min((w.saved / w.target) * 100, 100);
+            const div = document.createElement('div');
+            div.className = 'bg-bgCard border border-[var(--border-color)] p-4 rounded-2xl shadow-sm hover:shadow-md transition';
+            div.innerHTML = `
+                <div class="flex justify-between items-center mb-3">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xl bg-brandLight w-10 h-10 rounded-xl flex items-center justify-center">${w.icon}</span>
+                        <span class="font-bold text-sm text-textMain">${w.title}</span>
+                    </div>
+                    <span class="text-xs font-extrabold text-brand">${percentage.toFixed(0)}%</span>
+                </div>
+                <div class="w-full bg-bgBase rounded-full h-2 overflow-hidden">
+                    <div class="bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)] h-2 rounded-full" style="width: ${percentage}%"></div>
+                </div>
+            `;
+            return div;
+        }
+
+        function createWishlistCard(w, lang) {
+            const percentage = Math.min((w.saved / w.target) * 100, 100);
+            const isAchieved = percentage >= 100;
+            
+            const div = document.createElement('div');
+            div.className = `bento-card p-6 relative overflow-hidden flex flex-col justify-between bg-bgCard ${isAchieved ? 'border-income/30 bg-green-50/10' : ''}`;
+            
+            let actionHtml = !isAchieved 
+                ? `<button onclick="openFundModal('${w.id}', '${w.title}')" class="mt-6 w-full bg-bgBase border border-[var(--border-color)] text-textMain font-bold py-3 rounded-2xl text-sm hover:bg-textMain hover:text-bgBase transition shadow-sm">Nabung</button>`
+                : `<div class="mt-6 w-full bg-income/10 text-income font-extrabold py-3 rounded-2xl text-sm text-center border border-income/20"><i class="ph-bold ph-check-circle"></i> ${lang.achieved}</div>`;
+
+            div.innerHTML = `
+                <div>
+                    <div class="flex justify-between items-start mb-5">
+                        <div class="w-14 h-14 bg-brandLight rounded-2xl flex items-center justify-center text-3xl shadow-sm">${w.icon}</div>
+                        <button onclick="deleteWishlist('${w.id}')" class="text-textMuted hover:text-expense hover:bg-expense/10 transition p-2 bg-bgBase rounded-full"><i class="ph-bold ph-trash"></i></button>
+                    </div>
+                    <h3 class="font-extrabold text-xl text-textMain mb-6">${w.title}</h3>
+                    
+                    <div class="space-y-2 mb-2">
+                        <div class="flex justify-between text-xs font-bold">
+                            <span class="text-textMuted">${formatMoney(w.saved)}</span>
+                            <span class="text-brand">${percentage.toFixed(0)}%</span>
+                        </div>
+                        <div class="w-full bg-bgBase border border-[var(--border-color)] rounded-full h-3 overflow-hidden shadow-inner">
+                            <div class="${isAchieved ? 'bg-income' : 'bg-gradient-to-r from-[var(--gradient-1)] to-[var(--gradient-2)]'} h-full rounded-full transition-all duration-500" style="width: ${percentage}%"></div>
+                        </div>
+                        <div class="text-right text-[11px] text-textMuted font-bold uppercase tracking-widest mt-2">${lang.target}: ${formatMoney(w.target)}</div>
+                    </div>
+                </div>
+                ${actionHtml}
+            `;
+            return div;
+        }
+
+        // --- MODALS & ACTIONS ---
+        function openModal(id) { document.getElementById(id).classList.add('active'); }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            if(id === 'income-modal') document.getElementById('form-income').reset();
+            if(id === 'expense-modal') document.getElementById('form-expense').reset();
+            if(id === 'wishlist-modal') document.getElementById('form-wishlist').reset();
+            if(id === 'fund-modal') document.getElementById('form-fund').reset();
+        }
+
+        function openFundModal(id, title) {
+            document.getElementById('fund-id').value = id;
+            document.getElementById('fund-target-name').innerText = `Target: ${title}`;
+            openModal('fund-modal');
+        }
+
+        function deleteWishlist(id) {
+            if(confirm('Yakin ingin menghapus target impian ini?')) {
+                state.wishlists = state.wishlists.filter(w => w.id !== id);
+                saveState();
+                showToast('Target dihapus.');
+            }
+        }
+
+        // Form Submits
+        document.getElementById('form-income').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const amount = parseFloat(document.getElementById('inc-amount').value);
+            if(amount > 0) {
+                state.transactions.push({ id: generateId(), type: 'income', amount, category: document.getElementById('inc-category').value, note: document.getElementById('inc-note').value, date: new Date().toISOString() });
+                saveState();
+                closeModal('income-modal');
+                showToast('Yay! Pemasukan berhasil dicatat ✨');
+            }
+        });
+
+        document.getElementById('form-expense').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const amount = parseFloat(document.getElementById('exp-amount').value);
+            if(amount > 0) {
+                if(amount > state.balance) { alert("Oops! Saldo tidak mencukupi."); return; }
+                state.transactions.push({ id: generateId(), type: 'expense', amount, category: document.getElementById('exp-category').value, note: document.getElementById('exp-note').value, date: new Date().toISOString() });
+                saveState();
+                closeModal('expense-modal');
+                showToast('Pengeluaran dicatat.', 'error');
+            }
+        });
+
+        document.getElementById('form-wishlist').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const target = parseFloat(document.getElementById('wl-target').value);
+            if(target > 0) {
+                state.wishlists.push({ id: generateId(), title: document.getElementById('wl-name').value, icon: document.getElementById('wl-icon').value || '✨', target, saved: 0, status: 'progress' });
+                saveState();
+                closeModal('wishlist-modal');
+                showToast('Target impian baru dibuat! 💖');
+            }
+        });
+
+        document.getElementById('form-fund').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const amount = parseFloat(document.getElementById('fund-amount').value);
+            const id = document.getElementById('fund-id').value;
+            
+            if(amount > 0) {
+                if(amount > state.balance) { alert("Saldo tidak cukup untuk menabung!"); return; }
+                const wlIndex = state.wishlists.findIndex(w => w.id === id);
+                if(wlIndex > -1) {
+                    state.transactions.push({ id: generateId(), type: 'expense', amount, category: 'Lainnya', note: `Nabung: ${state.wishlists[wlIndex].title}`, date: new Date().toISOString() });
+                    state.wishlists[wlIndex].saved += amount;
+                    if(state.wishlists[wlIndex].saved >= state.wishlists[wlIndex].target) {
+                        state.wishlists[wlIndex].status = 'achieved';
+                        showToast(`Selamat! Target TERCAPAI! 🎉`);
+                    } else {
+                        showToast('Tabungan masuk! Semangat 💪');
+                    }
+                    saveState();
+                    closeModal('fund-modal');
+                }
+            }
+        });
+
+        // Filter Transactions
+        ['filter-all', 'filter-in', 'filter-out'].forEach(id => {
+            document.getElementById(id).addEventListener('click', (e) => {
+                ['filter-all', 'filter-in', 'filter-out'].forEach(btn => {
+                    document.getElementById(btn).className = 'px-6 py-3 rounded-2xl bg-bgCard border border-[var(--border-color)] text-textMuted font-bold text-sm whitespace-nowrap hover:text-brand hover:border-brandLight transition';
+                });
+                e.target.className = 'px-6 py-3 rounded-2xl bg-textMain text-bgBase font-bold text-sm whitespace-nowrap shadow-md';
+                const type = id === 'filter-in' ? 'income' : (id === 'filter-out' ? 'expense' : 'all');
+                renderTransactions(type);
+            });
+        });
+
+        // --- CUSTOMIZATION ---
+        function setTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+            state.settings.theme = theme;
+            saveState();
+            if(currentChart) renderChart();
+            
+            // Adjust mobile nav classes for dark mode visibility
+            const mobileNav = document.querySelector('nav.bg-white\\/70');
+            if(mobileNav) {
+                if(theme === 'dark') {
+                    mobileNav.classList.replace('bg-white/70', 'bg-black/70');
+                    mobileNav.classList.add('dark:bg-black/70', 'dark:border-white/10');
+                } else {
+                    mobileNav.classList.replace('bg-black/70', 'bg-white/70');
+                    mobileNav.classList.remove('dark:bg-black/70', 'dark:border-white/10');
+                }
+            }
+        }
+
+        function applyTheme(theme) {
+            document.body.setAttribute('data-theme', theme);
+        }
+
+        function changeLanguage(lang) {
+            state.settings.language = lang;
+            saveState();
+            applyLanguage(lang);
+            
+            document.getElementById('lang-id').className = lang === 'id' ? 'px-8 py-4 rounded-2xl bg-textMain text-bgBase font-bold text-sm shadow-md transition' : 'px-8 py-4 rounded-2xl bg-bgBase border border-[var(--border-color)] text-textMuted font-bold text-sm hover:text-textMain hover:border-textMain transition';
+            document.getElementById('lang-en').className = lang === 'en' ? 'px-8 py-4 rounded-2xl bg-textMain text-bgBase font-bold text-sm shadow-md transition' : 'px-8 py-4 rounded-2xl bg-bgBase border border-[var(--border-color)] text-textMuted font-bold text-sm hover:text-textMain hover:border-textMain transition';
+        }
+
+        function applyLanguage(lang) {
+            const d = dict[lang];
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                if (d[el.getAttribute('data-lang')]) el.innerHTML = d[el.getAttribute('data-lang')];
+            });
+        }
+
+        // --- CHART JS ---
+        function renderChart() {
+            if (currentChart) currentChart.destroy();
+            const style = getComputedStyle(document.body);
+            
+            // Create gradient for chart
+            const ctx = document.getElementById('financeChart').getContext('2d');
+            const gradientIncome = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientIncome.addColorStop(0, style.getPropertyValue('--color-income').trim() || '#34C759');
+            gradientIncome.addColorStop(1, '#8bf0a4');
+
+            const gradientExpense = ctx.createLinearGradient(0, 0, 0, 400);
+            gradientExpense.addColorStop(0, style.getPropertyValue('--color-expense').trim() || '#FF3B30');
+            gradientExpense.addColorStop(1, '#ff9690');
+            
+            Chart.defaults.font.family = '"Plus Jakarta Sans", sans-serif';
+            Chart.defaults.color = style.getPropertyValue('--text-muted').trim();
+
+            currentChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [dict[state.settings.language].income, dict[state.settings.language].expense],
+                    datasets: [{
+                        data: [state.totalIncome, state.totalExpense],
+                        backgroundColor: [gradientIncome, gradientExpense],
+                        borderWidth: 0, 
+                        hoverOffset: 10,
+                        borderRadius: 10
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            position: 'bottom', 
+                            labels: { 
+                                padding: 20, 
+                                usePointStyle: true,
+                                font: { weight: 'bold', size: 13 } 
+                            } 
+                        },
+                        tooltip: {
+                            backgroundColor: style.getPropertyValue('--bg-card').trim(),
+                            titleColor: style.getPropertyValue('--text-main').trim(),
+                            bodyColor: style.getPropertyValue('--text-muted').trim(),
+                            bodyFont: { weight: 'bold' },
+                            padding: 12,
+                            borderColor: style.getPropertyValue('--border-color').trim(),
+                            borderWidth: 1,
+                            cornerRadius: 12,
+                            displayColors: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return formatMoney(context.raw);
+                                }
+                            }
+                        }
+                    },
+                    cutout: '75%',
+                    animation: { animateScale: true, animateRotate: true }
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+
+
+</body></html>
